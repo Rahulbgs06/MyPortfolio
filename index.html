@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Kumar | QA with DevOps Skillset</title>
+    <!-- Modern Tailwind CSS for robust styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js for skill visualization (Persistent version) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         /* <!-- Chosen Palette: Corporate Slate & Professional Emerald. --> */
-        /* <!-- Application Structure Plan: Full-Cycle QA Dashboard. Logic: Identity -> Foundations (Manual/Linux) -> CI/CD Pipeline Flow 
--> Proficiency Matrix -> Artifacts -> Experience -> Contact. --> */
-        /* <!-- Visualization & Content Choices: 1. Navigation restored for all 6 major sections. 2. Manual Testing (98%) vs Selenium 
-(75%) balance. 3. Footer renamed to "Get In Touch" for better UX. CONFIRMATION: NO SVG/Mermaid used. --> */
+        /* <!-- Application Structure Plan: Full-Cycle QA Dashboard. Identity -> Foundations (Manual/Linux) -> CI/CD Pipeline Flow -> Proficiency Matrix (FIXED) -> Artifacts -> Experience -> Contact. --> */
+        /* <!-- Visualization & Content Choices: 1. Chart.js visibility fix: explicit container height and UMD library. 2. Skill Balance: Manual (98%) vs Selenium (75%). 3. Full navigation restored. CONFIRMATION: NO SVG/Mermaid used. --> */
         
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -24,7 +24,7 @@
             width: 100%;
             max-width: 850px;
             margin: 0 auto;
-            height: 400px;
+            height: 450px; /* Explicit height to prevent chart collapse */
         }
         .glass-nav {
             background: rgba(255, 255, 255, 0.95);
@@ -60,13 +60,10 @@
     <nav class="fixed top-0 w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div class="w-11 h-11 bg-slate-900 rounded-xl flex items-center justify-center text-emerald-400 font-bold text-2xl 
-shadow-lg border border-slate-700">R</div>
+                <div class="w-11 h-11 bg-slate-900 rounded-xl flex items-center justify-center text-emerald-400 font-bold text-2xl shadow-lg border border-slate-700">R</div>
                 <div class="flex flex-col">
-                    <span class="font-extrabold text-lg tracking-tighter leading-none uppercase italic">Rahul<span 
-class="text-emerald-500">Kumar</span></span>
-                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-tight">QA with DevOps 
-Skillset</span>
+                    <span class="font-extrabold text-lg tracking-tighter leading-none uppercase italic">Rahul<span class="text-emerald-500">Kumar</span></span>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-tight">QA with DevOps Skillset</span>
                 </div>
             </div>
             <div class="hidden lg:flex gap-6 text-[10px] font-bold uppercase tracking-widest text-slate-500">
@@ -77,8 +74,7 @@ Skillset</span>
                 <a href="#projects" class="hover:text-emerald-500 transition-colors">Artifacts</a>
                 <a href="#experience" class="hover:text-emerald-500 transition-colors">Experience</a>
             </div>
-            <a href="#contact" class="px-6 py-2.5 bg-slate-900 text-white font-bold rounded-full hover:bg-slate-800 transition-all 
-text-sm uppercase tracking-tighter border border-slate-700 shadow-sm">
+            <a href="#contact" class="px-6 py-2.5 bg-slate-900 text-white font-bold rounded-full hover:bg-slate-800 transition-all text-sm uppercase tracking-tighter border border-slate-700 shadow-sm">
                 Connect
             </a>
         </div>
@@ -88,8 +84,7 @@ text-sm uppercase tracking-tighter border border-slate-700 shadow-sm">
     <header id="about" class="pt-48 pb-24 px-6 relative bg-slate-50">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div class="relative z-10">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 border border-emerald-200 rounded-full 
-text-emerald-700 text-[10px] font-black mb-6 uppercase tracking-wider">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-100 border border-emerald-200 rounded-full text-emerald-700 text-[10px] font-black mb-6 uppercase tracking-wider">
                     <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
                     Available for QA & DevOps Roles
                 </div>
@@ -97,47 +92,35 @@ text-emerald-700 text-[10px] font-black mb-6 uppercase tracking-wider">
                     QA Expert with a <br><span class="text-emerald-500 italic">DevOps Skillset.</span>
                 </h1>
                 <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-xl font-medium">
-                    End-to-End Quality Engineer bridging the gap between manual precision and high-velocity infrastructure. Specialized 
-in Manual testing, Linux admin, and CI/CD pipelines.
+                    End-to-End Quality Engineer bridging the gap between manual precision and high-velocity infrastructure. Specialized in Manual testing, Linux admin, and CI/CD pipelines.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#projects" class="px-8 py-4 bg-emerald-500 text-white font-bold rounded-2xl hover:bg-emerald-600 
-transition-all shadow-xl shadow-emerald-200">Examine Artifacts</a>
+                    <a href="#projects" class="px-8 py-4 bg-emerald-500 text-white font-bold rounded-2xl hover:bg-emerald-600 transition-all shadow-xl shadow-emerald-200">Examine Artifacts</a>
                     <div class="flex gap-3">
-                        <a href="https://github.com/Rahulbgs06" target="_blank" class="p-4 bg-white border border-slate-200 rounded-2xl 
-hover:bg-slate-50 transition-all flex items-center gap-2">💻 GitHub</a>
-                        <a href="https://www.linkedin.com/in/rahul-kumar-se/" target="_blank" class="p-4 bg-white border border-slate-200 
-rounded-2xl hover:bg-slate-50 transition-all flex items-center gap-2">🔗 LinkedIn</a>
+                        <a href="https://github.com/Rahulbgs06" target="_blank" class="p-4 bg-white border border-slate-200 rounded-2xl hover:bg-slate-50 transition-all flex items-center gap-2">💻 GitHub</a>
+                        <a href="https://www.linkedin.com/in/rahul-kumar-se/" target="_blank" class="p-4 bg-white border border-slate-200 rounded-2xl hover:bg-slate-50 transition-all flex items-center gap-2">🔗 LinkedIn</a>
                     </div>
                 </div>
             </div>
             <div class="relative">
                 <div class="bg-white p-10 rounded-[3rem] shadow-2xl border border-slate-100 relative z-10">
-                    <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-6 underline decoration-emerald-500 
-underline-offset-8">Quality Core</h3>
+                    <h3 class="text-xs font-black text-slate-400 uppercase tracking-widest mb-6 underline decoration-emerald-500 underline-offset-8">Quality Core</h3>
                     <div class="space-y-6">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold 
-italic">M</div>
-                            <div><div class="font-bold text-sm text-slate-800">Manual Testing</div><div class="text-[10px] text-slate-400 
-uppercase font-black tracking-widest">Strategy • Bug Lifecycle</div></div>
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold italic">M</div>
+                            <div><div class="font-bold text-sm text-slate-800">Manual Testing</div><div class="text-[10px] text-slate-400 uppercase font-black tracking-widest">Strategy • Bug Lifecycle</div></div>
                         </div>
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold 
-italic">L</div>
-                            <div><div class="font-bold text-sm text-slate-800">Linux Administration</div><div class="text-[10px] 
-text-slate-400 uppercase font-black tracking-widest">Logs • File • Process Mgmt</div></div>
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold italic">L</div>
+                            <div><div class="font-bold text-sm text-slate-800">Linux Administration</div><div class="text-[10px] text-slate-400 uppercase font-black tracking-widest">Logs • File • Process Mgmt</div></div>
                         </div>
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold 
-italic">D</div>
-                            <div><div class="font-bold text-sm text-slate-800">DevOps Integration</div><div class="text-[10px] 
-text-slate-400 uppercase font-black tracking-widest">Jenkins • Docker • Webhooks</div></div>
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold italic">D</div>
+                            <div><div class="font-bold text-sm text-slate-800">DevOps Integration</div><div class="text-[10px] text-slate-400 uppercase font-black tracking-widest">Jenkins • Docker • Webhooks</div></div>
                         </div>
                     </div>
                 </div>
-                <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl 
-opacity-20"></div>
+                <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
             </div>
         </div>
     </header>
@@ -149,7 +132,6 @@ opacity-20"></div>
             <p class="text-slate-500 font-medium">Merging traditional quality assurance with modern system administration.</p>
         </div>
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <!-- Manual Testing Foundations -->
             <div>
                 <h2 class="text-2xl font-black text-slate-900 mb-8 tracking-tight flex items-center gap-3">
                     <span class="p-2 bg-emerald-500 text-white rounded-lg text-lg">📋</span> Manual QA Focus
@@ -157,17 +139,14 @@ opacity-20"></div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
                         <h4 class="font-bold text-sm uppercase mb-3 text-emerald-600 tracking-tighter">Test Design</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed italic font-medium">Scenario Mapping, Case Writing, and 
-Requirement Analysis for complete coverage.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed italic font-medium">Requirement Analysis, Scenario Mapping, and Case Writing for robust coverage.</p>
                     </div>
                     <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
                         <h4 class="font-bold text-sm uppercase mb-3 text-emerald-600 tracking-tighter">Bug Lifecycle</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed italic font-medium">Defect reporting in JIRA, Root Cause 
-Analysis (RCA), and regression validation.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed italic font-medium">Defect reporting in JIRA, Root Cause Analysis (RCA), and regression validation.</p>
                     </div>
                 </div>
             </div>
-            <!-- Linux Core -->
             <div>
                 <h2 class="text-2xl font-black text-slate-900 mb-8 tracking-tight flex items-center gap-3">
                     <span class="p-2 bg-slate-900 text-white rounded-lg text-lg">🐧</span> Linux Admin Core
@@ -175,13 +154,11 @@ Analysis (RCA), and regression validation.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
                         <h4 class="font-bold text-sm uppercase mb-3 text-emerald-600 tracking-tighter">Environment Control</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed italic font-medium">File system management (chmod/chown), SSH 
-configuration, and CLI-based automation.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed italic font-medium">File system management (chmod/chown), SSH config, and CLI-based automation.</p>
                     </div>
                     <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
                         <h4 class="font-bold text-sm uppercase mb-3 text-emerald-600 tracking-tighter">Log Monitoring</h4>
-                        <p class="text-xs text-slate-500 leading-relaxed italic font-medium">Real-time troubleshooting via tail, grep, 
-awk and process control via systemctl.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed italic font-medium">Real-time troubleshooting via tail/grep/awk and process control via systemctl.</p>
                     </div>
                 </div>
             </div>
@@ -192,39 +169,33 @@ awk and process control via systemctl.</p>
     <section id="pipeline" class="py-24 px-6 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl font-black mb-4 tracking-tight text-center">Project Automation Flow</h2>
-            <p class="text-slate-400 text-center mb-16 max-w-2xl mx-auto font-medium italic">Standard CI/CD implementation for ensuring 
-release stability.</p>
+            <p class="text-slate-400 text-center mb-16 max-w-2xl mx-auto font-medium italic">Standard CI/CD implementation used across my projects.</p>
             
             <div class="relative flex flex-col md:flex-row justify-between gap-12 md:gap-4 px-4">
                 <div class="pipeline-line hidden md:block border-emerald-500/20"></div>
                 
                 <div class="pipeline-step flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-slate-800 rounded-3xl flex items-center justify-center text-2xl shadow-lg border-2 
-border-slate-700">📥</div>
+                    <div class="w-16 h-16 bg-slate-800 rounded-3xl flex items-center justify-center text-2xl shadow-lg border-2 border-slate-700">📥</div>
                     <div class="mt-4 font-bold text-sm uppercase tracking-tighter">GitHub Push</div>
                     <div class="text-[9px] text-emerald-400 font-black uppercase mt-1">Webhook</div>
                 </div>
                 <div class="pipeline-step flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-slate-800 rounded-3xl flex items-center justify-center text-2xl shadow-lg border-2 
-border-emerald-500">🔨</div>
+                    <div class="w-16 h-16 bg-slate-800 rounded-3xl flex items-center justify-center text-2xl shadow-lg border-2 border-emerald-500">🔨</div>
                     <div class="mt-4 font-bold text-sm text-slate-300 uppercase tracking-tighter">Maven Build</div>
-                    <div class="text-[9px] text-slate-500 font-black uppercase mt-1">Compile</div>
+                    <div class="text-[9px] text-slate-500 font-black uppercase mt-1">Package</div>
                 </div>
                 <div class="pipeline-step flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-slate-800 rounded-3xl flex items-center justify-center text-2xl shadow-lg border-2 
-border-emerald-500">🐳</div>
+                    <div class="w-16 h-16 bg-slate-800 rounded-3xl flex items-center justify-center text-2xl shadow-lg border-2 border-emerald-500">🐳</div>
                     <div class="mt-4 font-bold text-sm text-slate-300 uppercase tracking-tighter">Dockerize</div>
                     <div class="text-[9px] text-slate-500 font-black uppercase mt-1">Containerize</div>
                 </div>
                 <div class="pipeline-step flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-slate-800 rounded-3xl flex items-center justify-center text-2xl shadow-lg border-2 
-border-emerald-500">🧪</div>
-                    <div class="mt-4 font-bold text-sm text-slate-300 uppercase tracking-tighter">Selenium Grid</div>
-                    <div class="text-[9px] text-slate-500 font-black uppercase mt-1">Automate</div>
+                    <div class="w-16 h-16 bg-slate-800 rounded-3xl flex items-center justify-center text-2xl shadow-lg border-2 border-emerald-500">🧪</div>
+                    <div class="mt-4 font-bold text-sm text-slate-300 uppercase tracking-tighter">Selenium Suite</div>
+                    <div class="text-[9px] text-slate-500 font-black uppercase mt-1">Verify</div>
                 </div>
                 <div class="pipeline-step flex flex-col items-center text-center">
-                    <div class="w-16 h-16 bg-emerald-500 rounded-3xl flex items-center justify-center text-2xl shadow-lg border-2 
-border-emerald-600">🎉</div>
+                    <div class="w-16 h-16 bg-emerald-500 rounded-3xl flex items-center justify-center text-2xl shadow-lg border-2 border-emerald-600">🎉</div>
                     <div class="mt-4 font-bold text-sm uppercase tracking-tighter">Deployment</div>
                     <div class="text-[9px] text-emerald-400 font-black uppercase mt-1 italic tracking-widest italic">Stable</div>
                 </div>
@@ -236,8 +207,8 @@ border-emerald-600">🎉</div>
     <section id="skills" class="py-24 bg-white border-y border-slate-100">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-black text-slate-900 mb-4 tracking-tight">Technical Proficiency Matrix</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto font-medium">Balancing expert Manual skills with growing Automation depth.</p>
+                <h2 class="text-4xl font-black text-slate-900 mb-4 tracking-tight uppercase">Technical Proficiency</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto font-medium">Balancing comprehensive Manual QA with a robust DevOps toolchain.</p>
             </div>
             <div class="chart-container">
                 <canvas id="skillsChart"></canvas>
@@ -254,121 +225,56 @@ border-emerald-600">🎉</div>
                     <div class="flex justify-between items-start mb-8">
                         <span class="text-4xl">🌐</span>
                         <div class="text-right">
-                            <span class="block text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">UI 
-Automation</span>
+                            <span class="block text-[10px] font-black text-slate-400 uppercase tracking-widest leading-none mb-1">Automation Framework</span>
                             <span class="text-emerald-500 font-black text-xs uppercase tracking-tighter">Selenium POM</span>
                         </div>
                     </div>
                     <h3 class="text-2xl font-black mb-4 tracking-tighter">Web Automation Ecosystem</h3>
                     <p class="text-slate-600 text-sm mb-8 leading-relaxed flex-grow font-medium italic">
-                        Built a Selenium framework for e-commerce. Managed execution environments using **Linux CLI** to trigger tests 
-within Dockerized nodes.
+                        Built a Selenium framework for e-commerce. Managed execution environments using **Linux CLI** to trigger tests within Dockerized nodes.
                     </p>
-                    <div class="flex items-center justify-between mt-auto">
-                        <div class="flex gap-2">
-                            <span class="px-2 py-1 bg-slate-100 text-slate-500 rounded text-[9px] font-black uppercase">Java</span>
-                            <span class="px-2 py-1 bg-slate-100 text-slate-500 rounded text-[9px] font-black uppercase">Docker</span>
-                        </div>
-                        <a href="https://github.com/Rahulbgs06/WebAutomationFrameWork" target="_blank" class="text-emerald-500 font-black 
-text-sm hover:underline">Source Code →</a>
-                    </div>
+                    <a href="https://github.com/Rahulbgs06/WebAutomationFrameWork" target="_blank" class="text-emerald-500 font-black text-sm hover:underline mt-auto">Source Code →</a>
                 </div>
 
                 <div class="p-10 bg-slate-900 text-white border border-slate-800 rounded-[3.5rem] hover-card flex flex-col">
                     <div class="flex justify-between items-start mb-8">
                         <span class="text-4xl">🚀</span>
                         <div class="text-right">
-                            <span class="block text-[10px] font-black text-slate-500 uppercase tracking-widest leading-none mb-1">CI/CD 
-Ops</span>
+                            <span class="block text-[10px] font-black text-slate-500 uppercase tracking-widest leading-none mb-1">CI/CD Ops</span>
                             <span class="text-emerald-400 font-black text-xs uppercase tracking-tighter">Jenkins Pipeline</span>
                         </div>
                     </div>
-                    <h3 class="text-2xl font-black mb-4 text-emerald-400 tracking-tighter uppercase italic">PetClinic Automated 
-Lifecycle</h3>
+                    <h3 class="text-2xl font-black mb-4 text-emerald-400 tracking-tighter uppercase italic">PetClinic Automated Lifecycle</h3>
                     <p class="text-slate-400 text-sm mb-8 leading-relaxed flex-grow font-medium">
-                        Automated the full PetClinic app sequence. Solved complex Java versioning and port issues using **Linux terminal 
-configurations**.
+                        Automated the full PetClinic app sequence. Solved complex Java versioning and port issues using **Linux terminal configurations**.
                     </p>
-                    <div class="flex items-center justify-between mt-auto">
-                        <div class="flex gap-2 text-slate-500">
-                            <span class="px-2 py-1 bg-slate-800 text-slate-400 rounded text-[9px] font-black uppercase">Linux 
-Admin</span>
-                            <span class="px-2 py-1 bg-slate-800 text-slate-400 rounded text-[9px] font-black uppercase">MySQL</span>
-                        </div>
-                        <a href="https://github.com/Rahulbgs06/petclinic-devops-demo" target="_blank" class="text-emerald-400 font-black 
-text-sm hover:underline tracking-tighter">Source Code →</a>
-                    </div>
+                    <a href="https://github.com/Rahulbgs06/petclinic-devops-demo" target="_blank" class="text-emerald-400 font-black text-sm hover:underline tracking-tighter mt-auto">Source Code →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Professional Experience -->
-    <section id="experience" class="py-24 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
-                <div>
-                    <h2 class="text-4xl font-black mb-12 underline decoration-emerald-500 underline-offset-8 decoration-4 
-tracking-tighter uppercase italic">Professional Narrative</h2>
-                    <div class="space-y-12">
-                        <div class="relative pl-8 border-l-2 border-emerald-500/30">
-                            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-emerald-500 shadow-[0_0_10px_#10b981]"></div>
-                            <div class="text-[10px] font-black text-emerald-400 uppercase tracking-widest mb-2 italic">April 2023 – April 
-2025</div>
-                            <h3 class="text-2xl font-bold uppercase tracking-tighter">Bigseer & Adoptnet Tech Pvt Ltd</h3>
-                            <p class="text-sm text-slate-400 italic mb-6">Production Support / QA Implementation</p>
-                            <ul class="text-sm text-slate-300 space-y-4 font-medium italic leading-relaxed">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-emerald-500 mt-1 font-bold">✔</span>
-                                    <span>Worked closely with QA engineers and developers to understand features and resolve 
-issues.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-emerald-500 mt-1 font-bold">✔</span>
-                                    <span>Performed manual testing and API testing using **Postman & SOAP UI**, validating JSON and XML 
-responses.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-emerald-500 mt-1 font-bold">✔</span>
-                                    <span>Verified database data using **MySQL** to ensure correct backend functionality.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-emerald-500 mt-1 font-bold">✔</span>
-                                    <span>Supported **User Acceptance Testing (UAT)** and performed deployment validation after 
-releases.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-emerald-500 mt-1 font-bold">✔</span>
-                                    <span>Provided production support and monitoring via **Grafana dashboards** to quickly resolve system 
-issues.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-emerald-500 mt-1 font-bold">✔</span>
-                                    <span>Handled **L1 and L2 support**, troubleshooting issues and creating **Root Cause Analysis 
-(RCA)** reports and SOPs.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <h2 class="text-4xl font-black mb-12 underline decoration-slate-700 underline-offset-8 decoration-4 tracking-tighter 
-uppercase italic">Academic Foundation</h2>
-                    <div class="space-y-6">
-                        <div class="p-10 bg-slate-800 rounded-[2.5rem] border border-slate-700 hover:border-emerald-500 
-transition-colors">
-                            <div class="text-emerald-500 text-[10px] font-black uppercase mb-2 tracking-widest italic">2024 – 2026 
-(Expected)</div>
-                            <h4 class="text-2xl font-black text-white mb-1 tracking-tighter">MTech – Computer Science</h4>
-                            <p class="text-slate-400 text-sm italic">Patel College of Science & Technology, Bhopal</p>
-                        </div>
-                        <div class="p-10 bg-slate-800 rounded-[2.5rem] border border-slate-700 hover:border-emerald-500 
-transition-colors">
-                            <div class="text-slate-500 text-[10px] font-black uppercase mb-2 tracking-widest italic">Graduated 2022</div>
-                            <h4 class="text-2xl font-black text-white mb-1 tracking-tighter">BTech – Computer Science</h4>
-                            <p class="text-slate-400 text-sm italic">Patel College of Science & Technology, Bhopal</p>
-                        </div>
-                    </div>
+    <section id="experience" class="py-24 bg-slate-900 text-white border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 text-center lg:text-left">
+            <h2 class="text-4xl font-black mb-16 underline decoration-emerald-500 underline-offset-8 decoration-4 uppercase italic">Professional Narrative</h2>
+            <div class="relative pl-8 border-l-2 border-emerald-500/30">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-emerald-500 shadow-[0_0_10px_#10b981]"></div>
+                <div class="text-[10px] font-black text-emerald-400 uppercase tracking-widest mb-2 italic">April 2023 – April 2025</div>
+                <h3 class="text-2xl font-bold uppercase tracking-tighter">Bigseer & Adoptnet Tech Pvt Ltd</h3>
+                <p class="text-sm text-slate-400 italic mb-8">Production Support / QA Implementation</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <ul class="text-sm text-slate-300 space-y-4 font-medium italic leading-relaxed">
+                        <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold">✔</span> Worked closely with engineers and developers to understand features and resolve issues.</li>
+                        <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold">✔</span> Performed manual and API testing using **Postman & SOAP UI**.</li>
+                        <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold">✔</span> Verified database data using **MySQL** to ensure backend functionality.</li>
+                    </ul>
+                    <ul class="text-sm text-slate-300 space-y-4 font-medium italic leading-relaxed">
+                        <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold">✔</span> Managed bug tracking in JIRA and supported **UAT** and release validation.</li>
+                        <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold">✔</span> Built **Grafana dashboards** for production monitoring.</li>
+                        <li class="flex items-start gap-2"><span class="text-emerald-500 font-bold">✔</span> Handled L1/L2 support, creating **RCA** reports and SOPs.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -377,25 +283,21 @@ transition-colors">
     <!-- Footer -->
     <footer id="contact" class="bg-white py-24 px-6 text-center border-t border-slate-100">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-5xl font-black text-slate-900 mb-8 leading-tight tracking-tighter italic decoration-emerald-500 underline 
-underline-offset-8 decoration-slate-200 uppercase tracking-tighter">Get In Touch.</h2>
+            <h2 class="text-5xl font-black text-slate-900 mb-8 leading-tight italic decoration-emerald-500 underline underline-offset-8 decoration-slate-200 uppercase">Get In Touch.</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-                <a href="mailto:rahulbgs06@gmail.com" class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 
-hover:border-emerald-500 transition-all flex flex-col items-center">
+                <a href="mailto:rahulbgs06@gmail.com" class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:border-emerald-500 transition-all flex flex-col items-center">
                     <span class="text-3xl mb-4">📧</span>
-                    <span class="text-[10px] font-black text-slate-400 uppercase mb-1 tracking-widest">Email Address</span>
+                    <span class="text-[10px] font-black text-slate-400 uppercase mb-1 tracking-widest text-slate-500">Email Address</span>
                     <span class="font-black text-slate-900 text-lg uppercase italic tracking-tighter">rahulbgs06@gmail.com</span>
                 </a>
-                <a href="tel:+916206431908" class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:border-emerald-500 
-transition-all flex flex-col items-center">
+                <a href="tel:+916206431908" class="p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 hover:border-emerald-500 transition-all flex flex-col items-center">
                     <span class="text-3xl mb-4">📞</span>
-                    <span class="text-[10px] font-black text-slate-400 uppercase mb-1 tracking-widest">Phone Number</span>
+                    <span class="text-[10px] font-black text-slate-400 uppercase mb-1 tracking-widest text-slate-500">Phone Number</span>
                     <span class="font-black text-slate-900 text-lg uppercase italic tracking-tighter">+91 6206431908</span>
                 </a>
             </div>
             <div class="flex justify-center gap-12 text-sm font-black text-slate-300 uppercase tracking-[0.4em] mb-12">
-                <a href="https://linkedin.com/in/rahul-kumar-se/" target="_blank" class="hover:text-emerald-500 
-transition-colors">LinkedIn</a>
+                <a href="https://linkedin.com/in/rahul-kumar-se/" target="_blank" class="hover:text-emerald-500 transition-colors">LinkedIn</a>
                 <a href="https://github.com/Rahulbgs06" target="_blank" class="hover:text-emerald-500 transition-colors">GitHub</a>
             </div>
             <div class="text-[10px] font-black text-slate-300 uppercase tracking-[0.4em] italic">
@@ -405,53 +307,59 @@ transition-colors">LinkedIn</a>
     </footer>
 
     <script>
-        window.onload = function() {
-            const ctx = document.getElementById('skillsChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Manual Testing & JIRA', 'Linux Admin & CLI', 'API Testing (Postman)', 'Jenkins CI/CD', 'Docker 
-Orchestration', 'MySQL/SQL', 'Selenium Automation'],
-                    datasets: [{
-                        label: 'Proficiency Level (%)',
-                        data: [98, 92, 88, 85, 82, 80, 75],
-                        backgroundColor: '#10B981',
-                        borderRadius: 12,
-                        barThickness: 32
-                    }]
-                },
-                options: {
-                    indexAxis: 'y',
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            backgroundColor: '#0F172A',
-                            titleFont: { size: 14, weight: 'bold', family: "'Plus Jakarta Sans'" },
-                            bodyFont: { size: 12, family: "'Plus Jakarta Sans'" },
-                            padding: 12,
-                            displayColors: false
-                        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('skillsChart');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Manual Testing & JIRA', 'Linux Admin & CLI', 'API Testing (Postman)', 'Jenkins CI/CD', 'Docker Orchestration', 'MySQL/SQL', 'Selenium Automation'],
+                        datasets: [{
+                            label: 'Proficiency Level (%)',
+                            data: [98, 92, 88, 85, 82, 80, 75],
+                            backgroundColor: '#10B981',
+                            borderRadius: 12,
+                            barThickness: 28,
+                            hoverBackgroundColor: '#059669'
+                        }]
                     },
-                    scales: {
-                        x: {
-                            max: 100,
-                            beginAtZero: true,
-                            grid: { display: false },
-                            ticks: { font: { size: 10, weight: 'bold', family: "'Plus Jakarta Sans'" } }
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                backgroundColor: '#0F172A',
+                                titleFont: { size: 14, weight: 'bold', family: "'Plus Jakarta Sans'" },
+                                bodyFont: { size: 12, family: "'Plus Jakarta Sans'" },
+                                padding: 12,
+                                cornerRadius: 8
+                            }
                         },
-                        y: {
-                            grid: { display: false },
-                            ticks: { 
-                                color: '#334155',
-                                font: { weight: 'bold', size: 12, family: "'Plus Jakarta Sans'" }
+                        scales: {
+                            x: {
+                                max: 100,
+                                beginAtZero: true,
+                                grid: { display: false },
+                                ticks: { 
+                                    font: { size: 10, weight: 'bold', family: "'Plus Jakarta Sans'" },
+                                    color: '#94A3B8'
+                                }
+                            },
+                            y: {
+                                grid: { display: false },
+                                ticks: { 
+                                    color: '#334155',
+                                    font: { weight: 'bold', size: 12, family: "'Plus Jakarta Sans'" }
+                                }
                             }
                         }
                     }
-                }
-            });
-        };
+                });
+            }
+        });
     </script>
 </body>
 </html>
